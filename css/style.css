@@ -12,126 +12,152 @@
 *
 * ======================================================= */
 body {
+  /* Tipo de letra */
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(0, 0, 0, 0.7); }
-  @media screen and (max-width: 992px) {
-    body {
-      font-size: 16px; } }
+  color: rgba(0, 0, 0, 0.7);
+}
+/*  DISPOSITIVOS MÓVILES : Cuerpo */
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+}
 
+/* Links */
 a {
   color: #2c98f0;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
-  a:hover, a:active, a:focus {
-    color: #2c98f0;
-    outline: none;
-    text-decoration: none !important; }
+  transition: 0.5s;
+}
+a:hover, a:active, a:focus {
+  color: #2c98f0;
+  outline: none;
+  text-decoration: none !important;
+}
 
+/* Párrafos */
 p {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+}
 
+/* Headers */
 h1, h2, h3, h4, h5, h6 {
   color: #000;
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
-  margin: 0 0 30px 0; }
+  margin: 0 0 30px 0;
+}
 
-figure {
-  margin-bottom: 2.5em;
-  float: left;
-  width: 100%; }
-  figure figcaption {
-    font-size: 16px;
-    width: 80%;
-    margin: 20px auto 0px auto;
-    color: #b3b3b3;
-    font-style: italic;
-    font-family: "Quicksand", Arial, sans-serif; }
-    @media screen and (max-width: 480px) {
-      figure figcaption {
-        width: 100%; } }
-
+/* Algo hará esto */
 ::-webkit-selection {
   color: #fff;
-  background: #2c98f0; }
-
+  background: #2c98f0;
+}
 ::-moz-selection {
   color: #fff;
-  background: #2c98f0; }
-
+  background: #2c98f0;
+}
 ::selection {
   color: #fff;
-  background: #2c98f0; }
+  background: #2c98f0;
+}
 
-#colorlib-page {
+/* Contenedor con la página */
+#pagina {
   width: 100%;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+}
 
-#colorlib-aside {
-  padding-top: 3em;
-  padding-bottom: 40px;
+/* Aside: Menú lateral */
+#menu-lateral {
+  padding-top: 3em; /* Margen superior */
+  padding-bottom: 40px; /* Margen inferior */
   float: left;
   width: 300px;
   position: fixed;
-  overflow-y: scroll;
+  overflow-y: hidden; /* Ocultamos el scroll en pantallas grandes */
   z-index: 1001;
-  background: #f2f3f7;
+  background: #f2f3f7; /* Color de fondo */
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
-  @media screen and (max-width: 768px) {
-    #colorlib-aside {
-      width: 300px;
-      -moz-transform: translateX(-300px);
-      -webkit-transform: translateX(-300px);
-      -ms-transform: translateX(-300px);
-      -o-transform: translateX(-300px);
-      transform: translateX(-300px);
-      padding-top: 4em; } }
-  #colorlib-aside .author-img {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%; }
-  #colorlib-aside .position {
-    display: block;
-    margin-bottom: 2em;
-    font-size: 12px;
-    text-transform: uppercase; }
-  #colorlib-aside #colorlib-logo {
-    text-align: right;
-    font-weight: 700;
-    font-size: 22px;
-    margin-bottom: .5em;
-    display: block;
-    width: 100%; }
-    #colorlib-aside #colorlib-logo a {
-      display: block;
-      text-align: center;
-      color: #000;
-      padding-right: .3em; }
-  #colorlib-aside #colorlib-main-menu {
-    display: block;
-    width: 100%; }
-    #colorlib-aside #colorlib-main-menu .collapse {
-      display: block !important; }
-    #colorlib-aside #colorlib-main-menu ul {
-      text-align: center;
-      margin: 0;
-      padding: 0; }
+  transition: 0.5s;
+}
+/* DISPOSITIVOS MÓVILES : Aside: Menú lateral */
+@media screen and (max-width: 768px) {
+  #menu-lateral {
+    width: 300px;
+    -moz-transform: translateX(-300px);
+    -webkit-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+    transform: translateX(-300px);
+    padding-top: 4em; /* Margen superior */
+    overflow-y: scroll; /* Mostramos la barra de scroll */
+  }
+}
+
+/* Imagen del menú lateral */
+#menu-lateral .imagen-lateral {
+  /* Tamaño */
+  width: 150px;
+  height: 150px;
+  /* Márgenes */
+  margin: 0 auto;
+  margin-bottom: 30px;
+  /* Forma redonda */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* Descripción lateral */
+#menu-lateral .descripcion {
+  display: block;
+  margin-bottom: 2em; /* Margen inferior */
+  font-size: 12px; /* Tamaño de letra */
+  text-transform: uppercase; /* Letras mayúsculas */
+}
+
+/* Nombre encima de la descripción lateral */
+#menu-lateral #nombre {
+  /* Tipo de letra */
+  text-align: right;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: .5em; /* Margen inferior */
+  display: block;
+  width: 100%;
+}
+/* Link del nombre */
+#menu-lateral #nombre a {
+  display: block;
+  text-align: center; /* Alineación del texto */
+  color: #000; /* Color del texto */
+  padding-right: .3em;
+}
+/* Menú lateral con los links de navegación */
+#menu-lateral #menu-navegacion {
+  display: block;
+  width: 100%;
+}
+#menu-lateral #menu-navegacion .colapso {
+  display: block !important;
+}
+
+  #menu-lateral #menu-navegacion ul {
+    text-align: center;
+    margin: 0;
+    padding: 0; }
       @media screen and (max-width: 768px) {
-        #colorlib-aside #colorlib-main-menu ul {
+        #menu-lateral #menu-navegacion ul {
           margin: 0 0 2em 0; } }
-      #colorlib-aside #colorlib-main-menu ul li {
+      #menu-lateral #menu-navegacion ul li {
         margin: 0 0 10px 0;
         padding: 0;
         list-style: none;
@@ -139,7 +165,7 @@ figure {
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 1px; }
-        #colorlib-aside #colorlib-main-menu ul li a {
+        #menu-lateral #menu-navegacion ul li a {
           color: rgba(0, 0, 0, 0.7);
           text-decoration: none;
           position: relative;
@@ -148,7 +174,7 @@ figure {
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
           transition: 0.3s; }
-          #colorlib-aside #colorlib-main-menu ul li a:after {
+          #menu-lateral #menu-navegacion ul li a:after {
             content: "";
             position: absolute;
             height: 1px;
@@ -167,26 +193,26 @@ figure {
             -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-          #colorlib-aside #colorlib-main-menu ul li a:hover {
+          #menu-lateral #menu-navegacion ul li a:hover {
             text-decoration: none;
             color: black; }
-            #colorlib-aside #colorlib-main-menu ul li a:hover:after {
+            #menu-lateral #menu-navegacion ul li a:hover:after {
               visibility: visible;
               -webkit-transform: scaleX(1);
               -moz-transform: scaleX(1);
               -ms-transform: scaleX(1);
               -o-transform: scaleX(1);
               transform: scaleX(1); }
-        #colorlib-aside #colorlib-main-menu ul li.active a {
+        #menu-lateral #menu-navegacion ul li.active a {
           color: #2c98f0; }
-          #colorlib-aside #colorlib-main-menu ul li.active a:after {
+          #menu-lateral #menu-navegacion ul li.active a:after {
             visibility: visible;
             -webkit-transform: scaleX(1);
             -moz-transform: scaleX(1);
             -ms-transform: scaleX(1);
             -o-transform: scaleX(1);
             transform: scaleX(1); }
-  #colorlib-aside .colorlib-footer {
+  #menu-lateral .colorlib-footer {
     font-size: 15px;
     text-align: center;
     font-weight: 400;
@@ -194,23 +220,23 @@ figure {
     padding: 0 20px;
     width: 100%; }
     @media screen and (max-width: 768px) {
-      #colorlib-aside .colorlib-footer {
+      #menu-lateral .colorlib-footer {
         position: relative;
         bottom: 0; } }
-    #colorlib-aside .colorlib-footer span {
+    #menu-lateral .colorlib-footer span {
       display: block; }
-    #colorlib-aside .colorlib-footer ul {
+    #menu-lateral .colorlib-footer ul {
       padding: 0;
       margin: 0; }
-      #colorlib-aside .colorlib-footer ul li {
+      #menu-lateral .colorlib-footer ul li {
         padding: 0;
         margin: 0;
         display: inline;
         list-style: none; }
-        #colorlib-aside .colorlib-footer ul li a {
+        #menu-lateral .colorlib-footer ul li a {
           color: rgb(205, 208, 210);
           padding: 4px; }
-          #colorlib-aside .colorlib-footer ul li a:hover, #colorlib-aside .colorlib-footer ul li a:active, #colorlib-aside .colorlib-footer ul li a:focus {
+          #menu-lateral .colorlib-footer ul li a:hover, #menu-lateral .colorlib-footer ul li a:active, #menu-lateral .colorlib-footer ul li a:focus {
             text-decoration: none;
             outline: none;
             color: #2c98f0; }
@@ -344,7 +370,7 @@ figure {
 
 body.offcanvas {
   overflow-x: hidden; }
-  body.offcanvas #colorlib-aside {
+  body.offcanvas #menu-lateral {
     -moz-transform: translateX(0);
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -397,7 +423,7 @@ body.offcanvas {
       padding-top: 5em;
       padding-bottom: 8em; } }
 
-.author-img {
+.imagen-lateral {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
