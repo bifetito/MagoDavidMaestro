@@ -1481,3 +1481,33 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+
+
+#colorlib-hero .desc {
+  margin-right: 0px;
+}
+#colorlib-hero .desc .desc-mobile {
+  display: none;
+}
+#colorlib-hero .desc .desc-pc {
+  display: inline;
+}
+#colorlib-hero .desc a {
+  display: inline;
+}
+@media screen and (max-width: 768px) {
+  #colorlib-hero .desc {
+    margin-right: 200px;
+    text-align: left;
+  }
+  #colorlib-hero .desc .desc-mobile {
+    display: inline;
+  }
+  #colorlib-hero .desc .desc-pc {
+    display: none;
+  }
+  #colorlib-hero .desc a {
+    display: none;
+  }
+}
