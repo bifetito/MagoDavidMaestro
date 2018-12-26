@@ -1447,7 +1447,7 @@ body.offcanvas {
   transition: 0.5s; }
   @media screen and (max-width: 768px) {
     .colorlib-nav-toggle {
-      opacity: 1;
+      opacity: 1; /* TODO: FIXME: CAMBIAR OPACIDAD PARA PODER PONER LA CARTA ENCIMA */
       visibility: visible; } }
 
 @media screen and (max-width: 480px) {
