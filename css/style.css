@@ -1515,3 +1515,14 @@ body.offcanvas {
     display: none;
   }
 }
+
+/* Texto del correo de contacto */
+p.contact-mail {
+  font-size: 16px;
+}
+/* DISPOSITIVOS MÓVILES : Iconos Redes Sociales */
+@media screen and (max-width: 768px) {
+  p.contact-mail {
+    font-size: 10px;
+  }
+}
